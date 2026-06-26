@@ -364,6 +364,21 @@ input[type=month]{-webkit-appearance:none}
     </div>
   </div>
 
+  <!-- MAKLUMAT AKAUN BANK -->
+  <div class="card" style="background:#f0fdf4;border:1.5px solid #86efac;margin-bottom:14px;">
+    <div class="card-title">💳 Maklumat Pembayaran</div>
+    <div style="font-size:14px;line-height:1.8;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+        <span style="font-size:22px;">🏦</span>
+        <div>
+          <div style="font-weight:700;color:#15803d;">MAYBANK</div>
+          <div style="font-size:18px;font-weight:700;letter-spacing:1px;color:#166534;">158136786376</div>
+          <div style="font-size:12px;color:#4b7a57;">Nurul Syawal Binti Sukardin</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <button class="btn btn-primary" onclick="generateReceipt()">🧾 Jana Resit</button>
   <div style="height:6px"></div>
   <button class="btn btn-outline" onclick="clearForm()">🗑️ Kosongkan</button>
@@ -576,6 +591,15 @@ function showReceipt(r){
   
   h += "<div class=\"r-total\"><span>Jumlah Keseluruhan</span><span class=\"amt\">RM "+r.total.toFixed(2)+"</span></div>";
   if(r.method) h += "<div class=\"r-row\" style=\"margin-top:8px\"><span class=\"lbl\">Kaedah</span><span class=\"val\">"+esc(r.method)+"</span></div>";
+  h += "<div style=\"margin-top:14px;padding:12px 14px;background:#f0fdf4;border-radius:12px;border:1.5px solid #86efac;\">";
+  h += "<div style=\"font-size:11px;font-weight:600;color:#4b7a57;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;\">💳 Maklumat Pembayaran</div>";
+  h += "<div style=\"display:flex;align-items:center;gap:10px;\">";
+  h += "<span style=\"font-size:20px;\">🏦</span>";
+  h += "<div>";
+  h += "<div style=\"font-weight:700;color:#15803d;font-size:13px;\">MAYBANK</div>";
+  h += "<div style=\"font-size:16px;font-weight:700;letter-spacing:1px;color:#166534;\">158136786376</div>";
+  h += "<div style=\"font-size:11px;color:#4b7a57;\">Nurul Syawal Binti Sukardin</div>";
+  h += "</div></div></div>";
   h += "</div>";
   
   h += "<div class=\"receipt-status\">";
